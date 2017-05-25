@@ -3,19 +3,27 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		
 		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		
 		<script src="js/jQueryRotate.2.2.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/jquery.easing.min.js" type="text/javascript" charset="utf-8"></script>
-		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<style type="text/css">
+			div{
+				width: 0px;
+				height: 0;
+				border-width: 10px;
+				border-style: solid;
+				border-color: #444 transparent transparent;
+			}
+		</style>
 	</head>
 	<body>
-		<!--header，引入的header文件-->
-		<div id="header_wrap"></div>
-		<!--banner广告-->
-		<div id="banner"><img src="imgs/banner.jpg"></div>
-		<!--logo&nav，引入的header文件-->
-		<div id="ln_wrap"></div>
+		<div></div>
+		<script>
+			$("div").click(function(){
+				$(this).rotate({duration:500,
+				animateTo: 180});
+			});
+		</script>
 	</body>
 </html>
