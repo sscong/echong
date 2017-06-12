@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script src="../js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/list.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jQueryRotate.2.2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery.easing.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/template.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery.transit.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/list.css"/>
+	</head>
+	<body>
+		<!--侧边栏-->
+		<div id="sider">
+			<ul class="shang">
+				<li>
+					<a href="login.html"></a>
+					<div>
+						您还没有登录，请先<a href="login.html">登录</a>。
+					</div>
+				</li>
+				<li>
+					<div>
+						<i></i>
+						
+						<span>购物车<strong>0</strong></span>
+					</div>
+					<div class="yin">
+						<p>您的购物车中暂无商品，赶紧选择心爱的商品吧！</p>
+						<a href="#">取出寄存的商品</a>
+					</div>
+				</li>
+				<li>
+					<i></i>
+					<span>在线客服</span>
+				</li>
+				<li>
+					<i></i>
+					<a href="#">我的订单<em>◆</em></a>
+				</li>
+				<li>
+					<i></i>
+				</li>
+			</ul>
+			<ul class="xia">
+				<li>
+					<i></i>
+					<div class="yin"></div>
+				</li>
+				<li>
+					<i></i>
+					<span>返回顶部<em>◆</em></span>
+				</li>
+			</ul>
+		</div>
+		<!--header-->
+		<div id="header_wrap">
+			<div id="header">
+				<div class="header_t1">
+					<div class="header_t11">送至：</div>
+					<div class="header_t12">
+						<span class="header_t12_tit">重庆</span>
+						<i class="jiao"></i>
+					</div>
+					<div class="header_t13">
+						<b></b>
+						<span class="header_t13_tit">E宠就是正品</span>
+					</div>
+					<div class="header_t14">
+						<a href="#">评价（<span>526.1万</span>）</a>
+					</div>
+				</div>
+				<ul class="header_t2">
+					<li>
+						<a href="javascript:;">投诉建议</a>
+					</li>
+					<li>
+						<a href="#">帮助</a>
+					</li>
+					<li class="phone">
+						<b></b>
+						<a href="#">手机版</a>
+					</li>
+					<li class="collect">
+						<a href="javascritp:;">
+							<span>收藏我</span>
+							<i></i>
+						</a>
+						<div>
+							<a href="#">
+								<span>加入收藏夹</span>
+							</a>
+							<a href="#">
+								<span>保存到桌面</span>
+							</a>
+						</div>
+					</li>
+					<li class="myE">
+						<b></b>
+						<a href="javascritp:;">
+							<span>我的E宠</span>
+							<i></i>
+						</a>
+						<div>
+							<ul>
+								<li>我的订单</li>
+								<li>VIP俱乐部</li>
+								<li>充值得优惠</li>
+							</ul>
+						<div>
+					</li>
+					<li>
+						<b></b>
+						<a href="#">购物车（<span class="num">0</span>）</a>
+					</li>
+					<li>
+						<a href="register.html">[注册]</a>
+					</li>
+					<li>
+						<a href="#">[登录]</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		
+		<!--logo-->
+		<div id="header_logo">
+			<h1>
+				<a href="../index.html"><img src="../imgs/epet-logo.png-v=1.png"/></a>
+			</h1>
+			<div class="search">
+				<form>
+					<input type="text" placeholder="冠能" />
+					<input type="button" value="搜索" />
+				</form>
+				<div class="search_keyword">
+					热门搜索：<span>冠能超级品牌日</span>　|　饮食指南　｜　麦德氏０元起　｜　小型犬成犬　｜
+				</div>
+			</div>
+			<div class="tele"></div>
+			<div class="cart">
+				购物车（<span>0</span>）
+			</div>
+		</div>
+		
+		<!--nav-->
+		<div id="nav">
+			<div class="nav_title">
+				<!--列表-->
+				<div class="nav_title_list">
+					<span>
+						狗狗<b></b>
+					</span>
+					<span class="hov">
+						商品分类<b></b>
+					</span>
+				</div>
+				
+				<!--二级菜单，三级菜单盒子-->
+				<div class="nav_rrr">
+				
+				<!--三级菜单-->
+				<div class="span_list3">
+					<ul>
+						<h4><i><img src="../imgs/cate_6.png"></i>狗狗日用<b></b></h4>
+						<li>
+							<h5>狗狗餐具<span></span></h5>
+							| <a href="#">食盆</a>
+							| <a href="#">奶瓶</a>
+							| <a href="#">饮水器</a>
+							| <a href="#">储粮器</a>
+							| <a href="#">定时喂食器</a>
+						</li>
+						<li>
+							<h5>狗狗餐具<span></span></h5>
+							| <a href="#">食盆</a>
+							| <a href="#">奶瓶</a>
+							| <a href="#">饮水器</a>
+							| <a href="#">储粮器</a>
+							| <a href="#">定时喂食器</a>
+						</li>
+					</ul>
+					<ul>
+						<h4><i><img src="../imgs/cate_6.png"></i>狗狗日用<b></b></h4>
+						<li>
+							<h5>狗狗餐具<span></span></h5>
+							| <a href="#">食盆</a>
+							| <a href="#">奶瓶</a>
+							| <a href="#">饮水器</a>
+							| <a href="#">储粮器</a>
+							| <a href="#">定时喂食器</a>
+						</li>
+						<li>
+							<h5>狗狗餐具<span></span></h5>
+							| <a href="#">食盆</a>
+							| <a href="#">奶瓶</a>
+							| <a href="#">饮水器</a>
+							| <a href="#">储粮器</a>
+							| <a href="#">定时喂食器</a>
+						</li>
+					</ul>
+				</div>
+					
+				
+				<!--二级菜单-->
+				<div class="span_list2">
+					<div class="span_list">
+						<article>
+							<a href="#"></a>
+							<a href="#"></a>
+							<p>20612种精选宝贝</p>
+							<input type="button" value="你正在狗狗站溜达" />
+						</article>
+						<article>
+							<a href="#"></a>
+							<a href="#"></a>
+							<p>8982种精选宝贝</p>
+							<input type="button" value="点击切换" />
+						</article>
+					</div>
+					
+					<div class="span_list">
+						<ul>
+							<li>
+								<h3>
+									<strong></strong>
+									<a href="#">主粮<i>2041</i></a>
+									<a href="#">零食<i>2740</i></a>
+									<p></p>
+								</h3>
+							</li>
+							<li>
+								<h3>
+									<strong></strong>
+									<a href="#">日用<i>2041</i></a>
+									<a href="#">玩具<i>2740</i></a>
+									<p></p>
+								</h3>
+								
+							</li>
+							<li>
+								<h3>
+									<strong></strong>
+									<a href="#">保健<i>2041</i></a>
+									<a href="#">医疗<i>2740</i></a>
+									<p></p>
+								</h3>
+							</li>
+							<li>
+								<h3>
+									<strong></strong>
+									<a href="#">服饰<i>2041</i></a>
+									<a href="#">牵引<i>2740</i></a>
+									<p></p>
+								</h3>
+							</li>
+							<li>
+								<h3>
+									<strong></strong>
+									<a href="#">美容<i>2041</i></a>
+									<a href="#">香波<i>2740</i></a>
+									<p></p>
+								</h3>
+							</li>
+							<li>
+								<h3>
+									<strong></strong>
+									<a href="#">周边<i>2041</i></a>
+									<a href="#">定制<i>2740</i></a>
+									<p></p>
+								</h3>
+							</li>
+							
+						</ul>
+						<p class="pptm">
+							<strong><img src="../imgs/active.png"></strong>
+							<a href="#">正在进行的品牌特卖<i>42</i></a>
+						</p>
+					</div>
+				</div>
+				
+				</div>
+				
+			</div>
+			<ul class="nav_list">
+				<li><a href=""><b></b>品牌特卖</a></li>
+				<li><a href="">热卖礼包<b><img src="../imgs/new.gif"></b></a></li>
+				<li><a href=""><b></b>E宠课堂</a></li>
+				<li><a href=""><b></b>体验馆</a></li>
+				<li><a href=""><b></b>清仓特价</a></li>
+				<li><a href="">国家馆</a></li>
+			</ul>
+		</div>
+		
+	<!--content-->	
+	<section>
+		<div id="con">
+			<div class="header">
+				<div>
+					狗狗
+					<em>20548</em>
+					<b></b>
+				</div>
+				<span>&gt;</span>
+				<div>
+					狗狗零食
+					<em>2753</em>
+					<b></b>
+				</div>
+			</div>
+			<!--侧边栏-->
+			<div class="left">
+				<div class="left1">
+					<h4>狗狗零食</h4>
+					<div class="left1_con">
+						<a href="#">
+							<img src="../imgs/listc1.jpg"/>
+							<span>磨牙洁齿<em>964</em></span>
+						</a>
+						<a href="#">
+							<img src="../imgs/listc2.jpg"/>
+							<span>肉制零食<em>1069</em></span>
+						</a>
+						<a href="#">
+							<img src="../imgs/listc3.jpg"/>
+							<span>奶酪布丁<em>96</em></span>
+						</a>
+						<a href="#">
+							<img src="../imgs/listc4.jpg"/>
+							<span>罐头湿粮<em>664</em></span>
+						</a>
+						<a href="#">
+							<img src="../imgs/listc5.jpg"/>
+							<span>梵米派<em>10</em></span>
+						</a>
+					</div>
+				</div>
+				<!--TA公益品牌商-->
+				<div class="left2">
+					<h4>TA公益品牌商</h4>
+					<div class="gong_pic">
+						<ul>
+							<li>
+								<img src="../imgs/gy1.jpg"/>
+								<p>
+									已捐助￥178,476.96<b></b>
+								</p>
+							</li>
+							<li>
+								<img src="../imgs/gy2.jpg"/>
+								<p>
+									已捐助￥178,476.96<b></b>
+								</p>
+							</li>
+							<li>
+								<img src="../imgs/gy3.jpg"/>
+								<p>
+									已捐助￥178,476.96<b></b>
+								</p>
+							</li>
+							<li>
+								<img src="../imgs/gy4.jpg"/>
+								<p>
+									已捐助￥178,476.96<b></b>
+								</p>
+							</li>
+							<li>
+								<img src="../imgs/gy5.jpg"/>
+								<p>
+									已捐助￥178,476.96<b></b>
+								</p>
+							</li>
+							<li>
+								<img src="../imgs/gy6.jpg"/>
+								<p>
+									已捐助<br/>￥178,476.96<b></b>
+								</p>
+							</li>
+							<li>
+								<img src="../imgs/gy7.jpg"/>
+								<p>
+									已捐助<br/>￥178,476.96<b></b>
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="left3">
+					<h4>未找到心仪的商品？</h4>
+					<a href="#">预定没有的商品</a>
+				</div>
+				<div class="left4">
+					<h4>相关知识</h4>
+					<p>
+						<a href="#">[驯养篇]</a>
+						<a href="#">笼子训练</a>
+					</p>
+					<p>
+						<a href="#">[驯养篇]</a>
+						<a href="#">散步训练</a>
+					</p>
+				</div>
+			</div>
+			<div class="right">
+				<div class="list">
+					<ul>
+						<li><span>默认</span></li>
+						<li><span>销量</span></li>
+						<li><span>人气</span></li>
+						<li><span>新品</span></li>
+						<li><span>评论</span></li>
+						<li><span>价格</span></li>
+					</ul>
+					<div class="nav2">
+						<p>共找到<span>2751</span>件商品</p>
+						<div class="yem">
+							<span>1</span>/
+							<span>46</span>
+						</div>
+						<input type="button" value="上一页"/>
+						<input type="button" value="下一页"/>
+					</div>
+				</div>
+				<!--商品列表-->
+				<ul class="list_con">
+					<!--<li>
+						<div class='con'>
+							<div class='img'><img src='../imgs/listr1.jpg'/></div>
+							<ul class="img_list"><li><img src="../imgs/listr1.jpg"></li></ul>
+							<a href='#' class='tit'><span>麦富迪 牛肉双拼系列 小型犬牛肉双拼成犬粮 2kg</span></a>
+							<div class='price'><em>￥70.68</em><span>￥58.90</span><i>14.72元/斤</i></div>
+							<div class='ys'><span>已售<em>578</em>袋</span><span><em>146</em>人互动</span><span><em>东部大仓</em>发货</span></div>
+						</div>
+						<div class='bt'><a href='#'><span>收藏</span></a><a href='#'><span>加入购物车</span></a></div>
+					</li>
+					<li>
+						<div class="con">
+							<div class="img">
+								<img src="../imgs/listr1.jpg"/>
+							</div>
+							<ul class="img_list">
+								<li><img src="../imgs/listr1.jpg"></li>
+							</ul>
+							<a href="#" class="tit"><span>麦富迪 牛肉双拼系列 小型犬牛肉双拼成犬粮 2kg</span></a>
+							<div class="price">
+								<em>￥70.68</em>
+								<span>￥58.90</span>
+								<i>14.72元/斤</i>
+							</div>
+							<div class="ys">
+								<span>已售<em>578</em>袋</span>
+								<span><em>146</em>人互动</span>
+								<span><em>东部大仓</em>发货</span>
+							</div>
+						</div>
+						<div class="bt">
+							<a href="#">
+								<span>收藏</span>
+							</a>
+							<a href="#">
+								<span>加入购物车</span>
+							</a>
+						</div>
+					</li>-->
+					
+				</ul>
+				
+				<!--页码-->
+				<div class="pages">
+					<div class="page_list">
+						<a href="#">1...</a>
+						<a href="#">上一页</a>
+						<a href="#" class="active">1</a>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">下一页</a>
+					</div>
+					<div class="kbs">
+						　|　<input type="text"/>
+						<span>共2064条</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+		
+	
+	<!--footer-->
+	<div id="foot_content">
+		<div id="foot_list">
+			<div class="foot_list_con">
+				<a href="#">绝对的正品</a>
+				<a href="#">全球的好货</a>
+				<a href="#">自家的仓库</a>
+				<a href="#">自家的配送</a>
+				<a href="#">养宠的帮手</a>
+				<a href="#">小小的成绩</a>
+			</div>
+		</div>
+		<div class="foot2">
+			<div class="foot2_left">
+				<img src="../imgs/dog_phone.gif" />
+				<div class="foot2_left_con">
+					<h4>服务热线：</h4>
+					<p>400-888-9200<span>(免长途费)</span></p>
+					<p>023-65584888</p>
+					<p>工作时间：09:00--21:00</p>
+				</div>
+			</div>
+			<div class="foot2_mid">
+				<ul>
+					<li>
+						<h4>支付方式</h4>
+						<p>
+							<a href="#">货到付款</a>
+							<a href="#">余额支付</a>
+							<a href="#">在线支付</a>
+						</p>
+					</li>
+					<li>
+						<h4>配送方式</h4>
+						<p>
+							<a href="#">E宠快递</a>
+							<a href="#">外包快递</a>
+							<a href="#">物流运输</a>
+							<a href="#">公司地址</a>
+						</p>
+					</li>
+					<li>
+						<h4>购物指南</h4>
+						<p>
+							<a href="#">退换货政策</a>
+							<a href="#">它时代杂志</a>
+							<a href="#">常见问题</a>
+							<a href="#">宠物知识</a>
+						</p>
+					</li>
+					<li>
+						<h4>关于我们</h4>
+						<p>
+							<a href="#">关于我们</a>
+							<a href="#">仓储中心</a>
+							<a href="#">联系我们</a>
+							<a href="#">人才招聘</a>
+						</p>
+					</li>
+				</ul>
+			</div>
+			<div class="foot2_right">
+				<div>
+					<p>扫描下载APP</p>
+					<p>下单更优惠</p>
+					<img src="../imgs/dw2.png" />
+				</div>
+				<div>
+					<p>扫描关注E宠</p>
+					<p>商城微信</p>
+					<img src="../imgs/dw2.png" />
+				</div>
+			</div>
+		</div>
+		<div class="foot3">
+			<div class="foot3_wzlist">
+				<span></span>
+				<div class="foot3_wzlist_con">
+					友情链接：
+					<a href="#">E宠猫用品</a>
+					<a href="#">骨头网</a>
+					<a href="#">狗粮品牌</a>
+					<a href="#">宠物用品</a>
+					<a href="#">钓鱼网</a>
+					<a href="#">狗粮价格</a>
+					<a href="#">淘狗网</a>
+					<a href="#">重庆宠物</a>
+					<a href="#">宠物狗</a>
+					<a href="#">淘宝返利</a>
+					<a href="#">9块9包邮</a>
+					<a href="#">披萨</a>
+					<a href="#">返利网</a>
+					<a href="#">品牌折扣网</a>
+					<a href="#">大连分类信息</a>
+					<a href="#">礼物网</a>
+					<a href="#">山东网</a>
+					<div class="yin">
+						<a href="#">E宠猫用品</a>
+						<a href="#">骨头网</a>
+						<a href="#">狗粮品牌</a>
+						<a href="#">宠物用品</a>
+						<a href="#">钓鱼网</a>
+						<a href="#">狗粮价格</a>
+						<a href="#">淘狗网</a>
+						<a href="#">重庆宠物</a>
+						<a href="#">宠物狗</a>
+						<a href="#">淘宝返利</a>
+						<a href="#">9块9包邮</a>
+						<a href="#">披萨</a>
+						<a href="#">返利网</a>
+						<a href="#">品牌折扣网</a>
+						<a href="#">大连分类信息</a>
+						<a href="#">礼物网</a>
+						<a href="#">山东网</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="foot3_tplist">
+				<a href="#"><img src="../imgs/360.png"></a>
+				<a href="#"><img src="../imgs/baiq.png"></a>
+				<a href="#"><img src="../imgs/bhdw.png"></a>
+				<a href="#"><img src="../imgs/cqgs.png"></a>
+				<a href="#"><img src="../imgs/jybz.png"></a>
+				<a href="#"><img src="../imgs/sfqy.png"></a>
+				<a href="#"><img src="../imgs/shiming.png"></a>
+				<a href="#"><img src="../imgs/sjws.png"></a>
+				<a href="#"><img src="../imgs/tx.png"></a>
+				<a href="#"><img src="../imgs/wsls.png"></a>
+				<a href="#"><img src="../imgs/360.png"></a>
+				<a href="#"><img src="../imgs/baiq.png"></a>
+			</div>
+			<p>渝ICP备13005525号-2　渝ICP备10002905　增值电信业务经营许可证：渝B2-20140042 Copyright © 2007-2017 epet.com 　重庆易宠科技有限公司</p>
+		</div>
+	</div>
+	
+	</body>
+</html>

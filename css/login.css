@@ -1,0 +1,239 @@
+#rHeader-wrap{
+	border-bottom: 1px solid #cecece;
+}
+#rHeader{
+	width: 1100px;
+	margin: 0 auto;
+	height: 60px;
+	padding: 30px 0;
+}
+#rHeader .logo{
+	float: left;
+}
+#rHeader .logo img{
+	float: left;
+}
+#rHeader .deng{
+	float: right;
+	margin-top: 13px;
+	margin-right: 5px;
+	font-size: 14px;
+}
+#rHeader .deng a:hover{
+	
+	color: #427fd2;
+}
+
+/**con**/
+#con_wrap{
+	height: 628px;
+	background: url(../imgs/login_bg.jpg) no-repeat center top;
+}
+#con{
+	height: 100%;
+	width: 1100px;
+	margin: 0 auto;
+	position: relative;
+}
+#con form{
+	width: 340px;
+	padding: 0 36px 30px;
+	background: #fff;
+	position: absolute;
+	top: 70px;
+	right: 5px;
+}
+#con form .tit{
+	height: 68px;
+	line-height: 68px;
+}
+#con form .tit span{
+	cursor: pointer;
+	height: 68px;
+	float: left;
+	width: 170px;
+	text-align: center;
+	border-bottom: 1px solid #cecece;
+	color: #999;
+}
+#con form .tit span.active{
+	color: #333;
+	border-bottom: 1px solid #33cb98;
+}
+
+/**普通登录**/
+#con form .form_con{
+	
+}
+#con form .form_con div{
+	margin-top: 20px;
+	padding-left: 15px;
+	height: 45px;
+	border: 1px solid #cecece;
+	line-height: 45px;
+}
+#con form .form_con div *{
+	float: left;
+}
+#con form .form_con div input{
+	width: 295px;
+	height: 45px;
+	border: 0;
+	background: none;
+	outline: none;
+}
+#con form .form_con .username span{
+	width: 23px;
+	height: 19px;
+	background: url(../imgs/ico.png) no-repeat left top;
+	margin-top: 15px;
+}
+#con form .form_con .password span{
+	width: 23px;
+	height: 19px;
+	background: url(../imgs/ico.png) no-repeat left -28px;
+	margin-top: 15px;
+}
+
+/**动态码登录**/
+#con form .form_con1{
+	display: none;
+}
+#con form .form_con1 .username{
+	margin-top: 20px;
+	padding-left: 15px;
+	height: 45px;
+	border: 1px solid #cecece;
+	line-height: 45px;
+}
+#con form .form_con1 .username input{
+	width: 295px;
+	height: 45px;
+	border: 0;
+	background: none;
+	outline: none;
+	float: left;
+	outline: none;
+}
+#con form .form_con1 .username span{
+	float: left;
+	width: 23px;
+	height: 19px;
+	background: url(../imgs/login_ico.png) no-repeat left -37px;
+	margin-top: 12px;
+}
+#con form .form_con1 .yanz,#con form .form_con1 .dongm{
+	margin-top: 20px;
+	height: 45px;
+}
+#con form .form_con1 .yanz div,#con form .form_con1 .dongm div{
+	padding-left: 15px;
+	width: 205px;
+	height: 45px;
+	border: 1px solid #cecece;
+	float: left;
+}
+#con form .form_con1 .yanz div *,#con form .form_con1 .dongm div *{
+	float: left;
+}
+#con form .form_con1 .yanz div span,#con form .form_con1 .dongm div span{
+	float: left;
+	width: 23px;
+	height: 19px;
+	background: url(../imgs/login_ico.png) no-repeat left -68px;
+	margin-top: 12px;
+}
+#con form .form_con1 .dongm div span{
+	background-position-y: -11px;
+}
+#con form .form_con1 .yanz div input,#con form .form_con1 .dongm div input{
+	width: 150px;
+	height: 45px;
+	border: 0;
+	background: none;
+	outline: none;
+}
+#con form .form_con1 .yanz i{
+	float: right;
+	width: 100px;
+	height: 45px;
+	
+}
+#con form .form_con1 .dongm i{
+	float: right;
+	width: 100px;
+	height: 45px;
+	border: 1px solid #33cb98;
+	border-radius: 5px;
+	line-height: 45px;
+	text-align: center;
+}
+#con form .form_con1 .dongm i:hover{
+	color: #fff;
+	background: #33cb98;
+}
+#con form .form_con1 .yanz i img{
+	width: 100px;
+	height: 45px;
+}
+
+#con form .zidong{
+	height: 23px;
+	margin-top: 20px;
+}
+#con form .zidong span{
+	float: right;
+}
+#con form .btn{
+	width: 340px;
+	height: 50px;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+	background: #33cb98;
+	border: 0;
+	margin: 20px 0;
+	border-radius: 5px;
+}
+#con .hezuo .left{
+	float: left;
+}
+#con .hezuo>a{
+	float: right;
+}
+#con .hezuo .left .hez_list{
+	margin-top: 10px;
+}
+#con .hezuo .left .hez_list a{
+	float: left;
+	width: 23px;
+	height: 19px;
+	margin-right: 10px;
+	background: url(../imgs/ico.png) no-repeat left -86px;
+}
+#con .hezuo .left .hez_list a:nth-of-type(2){
+	background-position-y: -115px;
+}
+#con .hezuo .left .hez_list a:nth-of-type(3){
+	background-position-y: -144px;
+}
+#con .hezuo .left .hez_list a:nth-of-type(4){
+	background-position-y: -170px;
+}
+
+
+/**footer**/
+#rfooter{
+	border-top: 1px solid #ddd;
+}
+#rfooter div{
+	width: 820px;
+	margin: 0 auto;
+	padding: 70px 0;
+	text-align: center;
+	color: #999;
+	font-size: 10px;
+}
+#rfooter div a{
+	color: #999;
+}

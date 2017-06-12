@@ -1,0 +1,395 @@
+
+#nav{
+	border-bottom: 2px solid #459d36;
+}
+#nav .nav_title_list span.hov{
+	background: #459d36;
+	border: 1px solid #459d36;
+}
+
+/**section**/
+section{
+	background: #F5F5F5;
+	overflow: hidden;
+}
+section #con{
+	width: 1200px;
+	margin: 0 auto;
+}
+section #con .header{
+	height: 26px;
+	padding: 10px 0;
+}
+section #con .header>*{
+	float: left;
+}
+section #con .header>span{
+	margin: 0 15px;
+}
+section #con .header div{
+	width: 85px;
+	height: 24px;
+	border: 1px solid #ddd;
+	background: #fff;
+	padding-left: 8px;
+	padding-right: 25px;
+	text-align: center;
+	line-height: 24px;
+	position: relative;
+}
+section #con .header div em{
+	color: #999;
+	font-style: normal;
+}
+section #con .header div b{
+	position: absolute;
+	width: 6px;
+	height: 6px;
+	border-bottom: 1px solid #999;
+	border-right: 1px solid #999;
+	transform: rotate(45deg);
+	top: 5px;
+	right: 15px;
+}
+
+
+/**侧边栏**/
+section .left{
+	float: left;
+	width: 200px;
+}
+section .left>div{
+	background: #fff;
+	border: 1px solid #999;
+	font-size: 14px;
+}
+section .left1 h4{
+	font-size: 16px;
+	height: 35px;
+	line-height: 35px;
+	border-bottom: 1px dotted #cecece;
+	padding-left: 8px;
+}
+section .left1 a{
+	display: block;
+	height: 51px;
+	border-bottom: 1px dotted #cecece;
+	line-height: 51px;
+	padding-left: 8px;
+}
+section .left1 a img{
+	width: 30px;
+	height: 30px;
+	float: left;
+	position: relative;
+	top: 8px;
+}
+section .left1 a span{
+	float: left;
+	margin-left: 5px;
+}
+section .left1 a span em{
+	font-style: normal;
+	color: #999;
+	margin-left: 5px;
+}
+section .left2{
+	margin: 10px 0;
+}
+section .left2 h4{
+	width: 149px;
+	height: 19px;
+	padding: 10px 10px 7px 39px;
+	background: url(../imgs/ta.png) no-repeat 7px 11px;
+}
+section .left2 .gong_pic{
+	width: 198px;
+	height: 222px;
+	overflow: hidden;
+	position: relative;
+}
+section .left2 .gong_pic ul{
+	position: absolute;
+}
+section .left2 .gong_pic li{
+	width: 198px;
+	height: 74px;
+	position: relative;
+	
+}
+section .left2 .gong_pic li img{
+	height: 74px;
+	margin: 0 auto;
+}
+section .left2 .gong_pic li p{
+	position: absolute;
+	width: 198px;
+	height: 44px;
+	background: rgba(0,0,0,0.7);
+	color: #fff;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	text-align: center;
+	padding-top: 30px;
+	display: none;
+}
+section .left2 .gong_pic li:hover p{
+	display: block;
+}
+section .left2 .gong_pic li p b{
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	border-bottom: 1px solid #fff;
+	border-right: 1px solid #fff;
+	transform: rotate(-45deg);
+	margin-left: 5px;
+}
+
+section .left3{
+	width: 178px;
+	height: 80px;
+	padding: 10px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+section .left3 a{
+	display: block;
+	width: 159px;
+	height: 45px;
+	background: #46ab50;
+	color: #fff;
+	line-height: 45px;
+	text-align: center;
+	margin: 15px auto;
+	border-radius: 3px;
+}
+section .left4 h4{
+	height: 32px;
+	line-height: 32px;
+	padding-left: 10px;
+	border-bottom: 2px solid #46ab50;
+}
+section .left4 p{
+	line-height: 32px;
+	padding-left: 10px;
+}
+section .left4 p a:first-child{
+	color: #f00;
+}
+
+/**right**/
+section .right{
+	float: right;
+}
+section .right .list{
+	width: 976px;
+	height: 53px;
+	border: 1px solid #ddd;
+	background: #fff;
+	z-index: 2;
+}
+section .right .list ul{
+	float: left;
+}
+section .right .list ul li{
+	float: left;
+	border-right: 1px solid #ddd;
+	line-height: 53px;
+	padding: 0 23px;
+	background: url(../imgs/paixu-ico.png) no-repeat 40px 5px;
+	
+}
+section .right .list ul li:first-child{
+	background: none;
+}
+section .right .list ul li:last-child{
+	background: url(../imgs/paixu-ico.png) no-repeat 40px -173px;
+}
+section .right .list ul li:hover,section .right .list ul li.active{
+	color: #fff;
+	background-color: #53aa5b;
+	background-position-x: -23px;
+}
+section .right .list .nav2{
+	float: right;
+	line-height: 53px;
+}
+section .right .list .nav2>*{
+	float: left;
+}
+section .right .list .nav2 p{
+	margin-right: 10px;
+}
+section .right .list .nav2 p span{
+	color: #f00;
+}
+section .right .list .nav2 .yem{
+	margin-right: 10px;
+}
+section .right .list input{
+	display: block;
+	width: 56px;
+	height: 29px;
+	background: #eee;
+	border: 1px solid #ddd;
+	margin-right: 10px;
+	margin-top: 10px;
+	
+}
+
+/**商品列表**/
+section .right .list_con{
+	width: 978px;
+}
+section .right .list_con>li{
+	width: 235px;
+	height: 418px;
+	background: #fff;
+	border: 1px solid #e6e6e6;
+	margin: 8px 6px 8px 0;
+	position: relative;
+	float: left;
+}
+section .right .list_con>li:hover{
+	border: 1px solid #53aa5b;
+}
+section .right .list_con li .con{
+	padding: 10px;
+}
+section .right .list_con li .img{
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+}
+section .right .list_con li .img img{
+	width: 200px;
+	height: 200px;
+}
+section .right .list_con li .img_list{
+	overflow: hidden;
+}
+section .right .list_con li .img_list li{
+	width: 30px;
+	height: 30px;
+	border: 1px solid #ddd;
+	padding: 1px;
+	float: left;
+}
+section .right .list_con li .img_list img{
+	width: 28px;
+	height: 28px;
+	padding: 1px;
+}
+section .right .list_con li .tit{
+	display: block;
+	font-size: 14px;
+	margin: 10px 0;
+}
+section .right .list_con li .price em{
+	font-style: normal;
+	color: #999;
+	font-size: 10px;
+	text-decoration: line-through;
+}
+section .right .list_con li .price{
+	text-align: center;
+	margin-bottom: 7px;
+}
+section .right .list_con li .price span{
+	color: #FF6600;
+	font-weight: 900;
+	font-size: 14px;
+}
+section .right .list_con li .price i{
+	font-style: normal;
+	color: #999;
+	font-size: 10px;
+}
+section .right .list_con li .ys{
+	overflow: hidden;
+}
+section .right .list_con li .ys span{
+	float: left;
+	margin-right: 30px;
+	color: #999;
+}
+section .right .list_con li .ys em{
+	font-style: normal;
+}
+section .right .list_con li .bt{
+	height: 33px;
+	border-top: 1px solid #ddd;
+	position: absolute;
+	bottom: 0;
+}
+section .right .list_con li .bt a:first-child{
+	display: block;
+	float: left;
+	width: 89px;
+	height: 33px;
+	border-right: 1px solid #ddd;
+	background: url(../imgs/pro-listico.jpg) no-repeat center -10px;
+}
+section .right .list_con li .bt a:first-child span{
+	display: none;
+	width: 89px;
+	height: 33px;
+	line-height: 33px;
+	text-align: center;
+	color: #fff;
+	background: #53aa5b;
+}
+section .right .list_con li .bt a:last-child{
+	display: block;
+	float: left;
+	width: 145px;
+	height: 33px;
+	background: url(../imgs/pro-listico.jpg) no-repeat center -60px;
+}
+section .right .list_con li .bt a:last-child span{
+	display: none;
+	width: 145px;
+	height: 33px;
+	line-height: 33px;
+	text-align: center;
+	color: #fff;
+	background: #53aa5b;
+}
+section .right .list_con li .bt a:hover span{
+	display: block;
+}
+
+
+/**页码**/
+section .right .pages{
+	clear: both;
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	align-items: center;
+}
+section .right .page_list a{
+	padding: 6px 15px;
+	background: #fff;
+	border: 1px solid #ddd;
+	line-height: 30px;
+}
+section .right .page_list a:hover,section .right .page_list a.active{
+	color: #fff;
+	background: #FF9900;
+	border: 1px solid #FF9900;
+}
+/*section .right .page_list a:nth-of-type(1){
+	display: none;
+}
+section .right .page_list a:nth-of-type(2){
+	display: none;
+}*/
+section .right .kbs input{
+	width: 29px;
+	height: 17px;
+	border: 1px solid #ddd;
+	background: #fff;
+}

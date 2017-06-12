@@ -8,14 +8,1382 @@
 		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/jQueryRotate.2.2.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/jquery.easing.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/template.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.transit.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
 	</head>
 	<body>
-		<!--header，引入的header文件-->
-		<div id="header_wrap"></div>
+		<!--侧边栏-->
+		<div id="sider">
+			<ul class="shang">
+				<li>
+					<a href="html/login.html"></a>
+					<div>
+						您还没有登录，请先<a href="html/login.html">登录</a>。
+					</div>
+				</li>
+				<li>
+					<div>
+						<i></i>
+						
+						<span>购物车<strong>0</strong></span>
+					</div>
+					<div class="yin">
+						<p>您的购物车中暂无商品，赶紧选择心爱的商品吧！</p>
+						<a href="#">取出寄存的商品</a>
+					</div>
+				</li>
+				<li>
+					<i></i>
+					<span>在线客服</span>
+				</li>
+				<li>
+					<i></i>
+					<a href="#">我的订单<em>◆</em></a>
+				</li>
+				<li>
+					<i></i>
+				</li>
+			</ul>
+			<ul class="xia">
+				<li>
+					<i></i>
+					<div class="yin"></div>
+				</li>
+				<li>
+					<i></i>
+					<span>返回顶部<em>◆</em></span>
+				</li>
+			</ul>
+		</div>
+		<!--header-->
+		<div id="header_wrap">
+			<div id="header">
+				<div class="header_t1">
+					<div class="header_t11">送至：</div>
+					<div class="header_t12">
+						<span class="header_t12_tit">重庆</span>
+						<i class="jiao"></i>
+					</div>
+					<div class="header_t13">
+						<b></b>
+						<span class="header_t13_tit">E宠就是正品</span>
+					</div>
+					<div class="header_t14">
+						<a href="#">评价（<span>526.1万</span>）</a>
+					</div>
+				</div>
+				<ul class="header_t2">
+					<li>
+						<a href="javascript:;">投诉建议</a>
+					</li>
+					<li>
+						<a href="#">帮助</a>
+					</li>
+					<li class="phone">
+						<b></b>
+						<a href="#">手机版</a>
+					</li>
+					<li class="collect">
+						<a href="javascritp:;">
+							<span>收藏我</span>
+							<i></i>
+						</a>
+						<div>
+							<a href="#">
+								<span>加入收藏夹</span>
+							</a>
+							<a href="#">
+								<span>保存到桌面</span>
+							</a>
+						</div>
+					</li>
+					<li class="myE">
+						<b></b>
+						<a href="javascritp:;">
+							<span>我的E宠</span>
+							<i></i>
+						</a>
+						<div>
+							<ul>
+								<li>我的订单</li>
+								<li>VIP俱乐部</li>
+								<li>充值得优惠</li>
+							</ul>
+						<div>
+					</li>
+					<li>
+						<b></b>
+						<a href="#">购物车（<span class="num">0</span>）</a>
+					</li>
+					<li>
+						<a href="html/register.html">[注册]</a>
+					</li>
+					<li>
+						<a href="html/login.html">[登录]</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 		<!--banner广告-->
 		<div id="banner"><img src="imgs/banner.jpg"></div>
-		<!--logo&nav，引入的header文件-->
-		<div id="ln_wrap"></div>
+		
+		<!--logo-->
+		<div id="header_logo">
+			<h1>
+				<a href="index.html"><img src="imgs/epet-logo.png-v=1.png"/></a>
+			</h1>
+			<div class="search">
+				<form>
+					<input type="text" placeholder="冠能" />
+					<input type="button" value="搜索" />
+				</form>
+				<div class="search_keyword">
+					热门搜索：<span>冠能超级品牌日</span>　|　饮食指南　｜　麦德氏０元起　｜　小型犬成犬　｜
+				</div>
+			</div>
+			<div class="tele"></div>
+			<div class="cart">
+				购物车（<span>0</span>）
+			</div>
+		</div>
+		
+		<!--nav-->
+		<div id="nav">
+			<div class="nav_title">
+				<!--列表-->
+				<div class="nav_title_list">
+					<span>
+						狗狗<b></b>
+					</span>
+					<span class="hov">
+						商品分类<b></b>
+					</span>
+				</div>
+						
+						
+						<div class="nav_sr_wrap">
+							<!--三级菜单-->
+							<div class="span_list3">
+								<script type="text/html" id="nav_s">
+									<img src="imgs/{{imgSrc}}"/>
+									{{each List1 as value}}
+										<ul>
+											<h4><i><img src="imgs/{{value.imgSrc1}}"></i>{{value.tit}}<b></b></h4>
+											{{each value.List2 as items}}
+												<li>
+													<h5>{{items.tit1}}<span><img src="imgs/{{items.imgSrc2}}"/></span></h5>
+													{{each items.List3 as n i}}
+														{{if i != items.List3.length-1}}
+														<span class="dl">|</span>
+														{{/if}}
+														<a href="#">{{n}}</a>
+													{{/each}}
+												</li>
+											{{/each}}
+										</ul>
+										
+									{{/each}}
+								</script>
+								<!--<img src="imgs/ii.jpg"/>
+								<ul>
+									
+									<h4><i><img src="imgs/feng1.jpg"></i>狗狗日用<b></b></h4>
+									<li>
+										<h5>狗狗餐具<span><img src="imgs/feng4.jpg"></span></h5>
+										| <a href="#">食盆</a>
+										| <a href="#">奶瓶</a>
+										| <a href="#">饮水器</a>
+										| <a href="#">储粮器</a>
+										| <a href="#">定时喂食器</a>
+									</li>
+									<li>
+										<h5>狗狗餐具<span><img src="imgs/feng4.jpg"></span></h5>
+										| <a href="#">食盆</a>
+										| <a href="#">奶瓶</a>
+										| <a href="#">饮水器</a>
+										| <a href="#">储粮器</a>
+										| <a href="#">定时喂食器</a>
+									</li>
+								</ul>
+								<ul>
+									<h4><i><img src="imgs/cate_6.png"></i>狗狗日用<b></b></h4>
+									<li>
+										<h5>狗狗餐具<span></span></h5>
+										| <a href="#">食盆</a>
+										| <a href="#">奶瓶</a>
+										| <a href="#">饮水器</a>
+										| <a href="#">储粮器</a>
+										| <a href="#">定时喂食器</a>
+									</li>
+									<li>
+										<h5>狗狗餐具<span></span></h5>
+										| <a href="#">食盆</a>
+										| <a href="#">奶瓶</a>
+										| <a href="#">饮水器</a>
+										| <a href="#">储粮器</a>
+										| <a href="#">定时喂食器</a>
+									</li>
+								</ul>-->
+							</div>
+						
+					
+							<!--二级菜单-->
+							<div class="span_list2">
+								<div class="span_list">
+									<article>
+										<a href="#"></a>
+										<a href="#"></a>
+										<p>20612种精选宝贝</p>
+										<input type="button" value="你正在狗狗站溜达" />
+									</article>
+									<article>
+										<a href="#"></a>
+										<a href="#"></a>
+										<p>8982种精选宝贝</p>
+										<input type="button" value="点击切换" />
+									</article>
+								</div>
+								<!--二级菜单-->
+								<div class="span_list span_list2">
+										<ul>
+										<script type="text/html" id="Nav_r">
+											{{each navList as value}}
+												<li>
+													<h3>
+														<strong></strong>
+														{{each value as item}}
+															<a href={{item.link}}>{{item.title}}<i>{{item.num}}</i></a>
+														{{/each}}
+													</h3>
+												</li>	
+											{{/each}}
+											<p class="pptm">
+												<strong><img src="imgs/active.png"></strong>
+												<a href="#">正在进行的品牌特卖<i>{{prandNum.num}}</i></a>
+											</p>
+										</script>
+										</ul>
+								</div>
+								
+								<!--<div class="span_list">
+									<ul>
+										
+										<li>
+											<h3>
+												<strong></strong>
+												<a href="#">服饰<i>2041</i></a>
+												<a href="#">牵引<i>2740</i></a>
+												<p></p>
+											</h3>
+										</li>
+										<li>
+											<h3>
+												<strong></strong>
+												<a href="#">美容<i>2041</i></a>
+												<a href="#">香波<i>2740</i></a>
+												<p></p>
+											</h3>
+										</li>
+										<li>
+											<h3>
+												<strong></strong>
+												<a href="#">周边<i>2041</i></a>
+												<a href="#">定制<i>2740</i></a>
+												<p></p>
+											</h3>
+										</li>
+										
+									</ul>
+									<p class="pptm">
+										<strong><img src="imgs/active.png"></strong>
+										<a href="#">正在进行的品牌特卖<i>42</i></a>
+									</p>
+								</div>-->
+							</div>
+							
+						</div>
+						
+			</div>
+			<ul class="nav_list">
+				<li><a href=""><b></b>品牌特卖</a></li>
+				<li><a href="">热卖礼包<b><img src="imgs/new.gif"></b></a></li>
+				<li><a href=""><b></b>E宠课堂</a></li>
+				<li><a href=""><b></b>体验馆</a></li>
+				<li><a href=""><b></b>清仓特价</a></li>
+				<li><a href="">国家馆</a></li>
+			</ul>
+		</div>
+		
+		<!--轮播图-->
+		<div id="sWrap">
+			<div id="sLider">
+				<div class="slider-wrap">
+					<ul class="slider">
+						<li><img src="imgs/banner1.jpg"></li>
+						<li><img src="imgs/banner2.jpg"></li>
+						<li><img src="imgs/banner3.jpg"></li>
+						<li><img src="imgs/banner4.jpg"></li>
+						<li><img src="imgs/banner5.jpg"></li>
+					</ul>
+					<ul class="slider-nav">
+						<li class="active">1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+					</ul>
+				</div>
+				
+				<!--右边侧边栏-->
+				<ul class="slide">
+					<li><img src="imgs/slide1.jpg"/></li>
+					<li><img src="imgs/slide1.jpg"/></li>
+					<li><img src="imgs/slide1.jpg"/></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!--每日疯抢-->
+		<div id="qianggou" class="clear">
+			<div class="left">
+				<img src="imgs/surprise-tit.png"/>
+				<p>距本场结束还有</p>	
+				<div class="time">
+					<span>0</span><span>2</span><b>:</b>
+					<span>1</span><span>5</span><b>:</b>
+					<span>0</span><span>8</span>
+					
+				</div>
+				<div class="time-tit">
+					<span>16:00</span>
+					<span></span>
+				</div>
+				<div style="font-size: 20px;" class="jinxing">进行中...</div>
+				<div class="bg">
+					<div></div>
+				</div>
+			</div>
+			<div class="right">
+				<div class="right-timer">
+					<ul class="right-timer-list">
+						<li>
+							<p>09:00</p>
+							<p>已结束</p>
+						</li>
+						<li>
+							<p>11:00</p>
+							<p>以结束</p>
+						</li>
+						<li>
+							<p>14:00</p>
+							<p>以结束</p>
+						</li>
+						<li>
+							<p>16:00</p>
+							<p>以结束</p>
+						</li>
+						<li>
+							<p>20:00</p>
+							<p>以结束</p>
+						</li>
+						<li>
+							<p>22:00</p>
+							<p>以结束</p>
+						</li>
+						<li class="mselect">
+							<p>明日</p>
+							<p>预告</p>
+						</li>
+					</ul>
+				</div>
+				<div class="right-pic-wrap">
+					
+						<div class="right-pic">
+							<ul>
+							</ul>
+						</div>
+					
+					
+						<script type="text/html" id="tabs">
+						
+								{{each list as value}}
+							        <li>
+							        	<img src={{value.list1[0]}} />
+							        	<span>限时抢购</span>
+							        	<p>{{value.list1[1]}}</p>
+							        	<div class="right-pic-price">
+											￥<span>{{value.list1[2]}}</span>
+											<span>{{value.list1[3]}}</span>
+										</div>
+										<div class="jindu">
+											<span></span>
+										</div>
+										<input type="button" value="立即抢购"/>
+							        </li>  
+							    {{/each}}
+							    </script>
+					<!--<div class="right-pic">
+						<ul>
+							<li>
+								<img src="imgs/feng1.jpg" />
+								<span>限时抢购</span>
+								<p>顽皮Wanpy 金枪鱼猫条 30g</p>
+								<div class="right-pic-price">
+									￥<span>0.10</span>
+									<span>4.50</span>
+								</div>
+								<div class="jindu">
+									<span></span>
+								</div>
+								<input type="button" value="立即抢购"/>
+							</li>
+							<li>
+								<img src="imgs/feng1.jpg" />
+								<span>限时抢购</span>
+								<p>顽皮Wanpy 金枪鱼猫条 30g</p>
+								<div class="right-pic-price">
+									￥<span>0.10</span>
+									<span>4.50</span>
+								</div>
+								<div class="jindu">
+									<span></span>
+								</div>
+								<input type="button" value="立即抢购"/>
+							</li>
+							<li>
+								<img src="imgs/feng1.jpg" />
+								<span>限时抢购</span>
+								<p>顽皮Wanpy 金枪鱼猫条 30g</p>
+								<div class="right-pic-price">
+									￥<span>0.10</span>
+									<span>4.50</span>
+								</div>
+								<div class="jindu">
+									<span></span>
+								</div>
+								<input type="button" value="立即抢购"/>
+							</li>
+							<li>
+								<img src="imgs/feng1.jpg" />
+								<span>限时抢购</span>
+								<p>顽皮Wanpy 金枪鱼猫条 30g</p>
+								<div class="right-pic-price">
+									￥<span>0.10</span>
+									<span>4.50</span>
+								</div>
+								<div class="jindu">
+									<span></span>
+								</div>
+								<input type="button" value="立即抢购"/>
+							</li>
+							<li>
+								<img src="imgs/feng1.jpg" />
+								<span>限时抢购</span>
+								<p>顽皮Wanpy 金枪鱼猫条 30g</p>
+								<div class="right-pic-price">
+									￥<span>0.10</span>
+									<span>4.50</span>
+								</div>
+								<div class="jindu">
+									<span></span>
+								</div>
+								<input type="button" value="立即抢购"/>
+							</li>
+						</ul>
+					</div>-->
+					<a href="javascript:void(0);">&lt;</a>
+					<a href="javascript:void(0);">&gt;</a>
+				</div>
+			</div>
+		</div>
+		
+		<!--新品尝鲜-->
+		<div id="xinpin">
+			<div class="left">
+				<div class="left-con">
+					<div class="left-conl">
+						<p>新品尝鲜</p>
+						<a href="#">上架新品639件>> </a>
+						<div class="xian"><img src="imgs/fgline.png"></div>
+						<p>m*****1 第304个尝鲜的人，获得商品折扣</p>
+						<div class="zhekou">
+							<span>8.2</span>
+							<span>折</span>
+						</div>
+						<div class="cxian">进入尝鲜栏目>></div>
+					</div>
+				</div>
+			</div>
+			<ul class="right">
+				<li>
+					<div class="r_con">
+						<h4>拉夫威尔RUFFWEAR 艾拉雨衣 暮光灰L</h4>
+						<p>淅淅沥沥的春雨，挡不住外出的热情，难得闲暇，带上它就一件雨衣的事儿！</p>
+						<div class="xian_price">￥699.00</div>
+						<p>一人一狗一雨衣 </p>
+						<p>漫步春雨更温馨 </p>
+					</div>
+					
+					<div class="xian_pic"><img src="imgs/xian1.jpg"></div>
+				</li>
+				<li>
+					<div class="r_con">
+						<h4>拉夫威尔RUFFWEAR 艾拉雨衣 暮光灰L</h4>
+						<p>淅淅沥沥的春雨，挡不住外出的热情，难得闲暇，带上它就一件雨衣的事儿！</p>
+						<div class="xian_price">￥699.00</div>
+						<p>一人一狗一雨衣 </p>
+						<p>漫步春雨更温馨 </p>
+					</div>
+					
+					<div class="xian_pic"><img src="imgs/xian1.jpg"></div>
+				</li>
+				<li>
+					<div class="r_con">
+						<h4>拉夫威尔RUFFWEAR 艾拉雨衣 暮光灰L</h4>
+						<p>淅淅沥沥的春雨，挡不住外出的热情，难得闲暇，带上它就一件雨衣的事儿！</p>
+						<div class="xian_price">￥699.00</div>
+						<p>一人一狗一雨衣 </p>
+						<p>漫步春雨更温馨 </p>
+					</div>
+					
+					<div class="xian_pic"><img src="imgs/xian1.jpg"></div>
+				</li>
+			</ul>
+		</div>
+		
+		<!--品牌街-->
+		<div id="pinpai">
+			<div class="left">
+				<img src="imgs/ad-img2.jpg" />
+				<div class="left_con">
+					<div class="left_con_s">
+						<ul class="pin_list">
+							<li><img src="imgs/pin1.jpg"/></li>
+							<li><img src="imgs/pin2.jpg"/></li>
+							<li><img src="imgs/pin3.jpg"/></li>
+						</ul>
+					</div>
+					<ul class="pin_nav">
+						<li class="active"></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+			<ul class="mid">
+				<script type="text/html" id="tabs2">
+					{{each list as value}}
+				        <li>
+				        	<img src={{value[0]}} />
+				        	<div>
+								<span>{{value[1]}}</span>个试用商品
+							</div>
+				        </li>  
+				    {{/each}}
+				</script>
+				<!--<li>
+					<img src="imgs/pin4.jpg"  />
+					<div>
+						<span>5</span>个试用商品
+					</div>
+				</li>
+				<li>
+					<img src="imgs/pin4.jpg"  />
+					<div>
+						<span>5</span>个试用商品
+					</div>
+				</li>
+				<li>
+					<img src="imgs/pin4.jpg"  />
+					<div>
+						<span>5</span>个试用商品
+					</div>
+				</li>-->
+			</ul>
+			<div class="right">
+				<div class="right_tit">免费试用</div>
+				<div class="right_con">
+					<div class="right_con_s">
+						还有<span>0</span>个免费试用>>
+					</div>
+					<img src="imgs/pin16.jpg"  />
+					<div class="right_con_price">
+						<span>￥30.00</span>
+						<span>免费</span>
+					</div>
+					<p>德国进口 特瑞仕TRIXIE 美资炫帕尔玛奶酪狗狗披萨 170g</p>
+				</div>
+			</div>
+		</div>
+		
+		<!--狗狗主粮-->
+		<article class="main">
+			<h3><i></i>狗狗主粮</h3>
+			<div class="main_con">
+				<div class="left">
+					<img src="imgs/maingb1.jpg"  />
+					<div class="left_con">
+						<div class="hot">
+							<span>———————</span>
+							<i></i><b>最热HOT</b>
+							<span>———————</span>
+						</div>
+						<div class="prind">
+							<a href="#">比瑞吉爆款</a>
+							<a href="#">麦德林</a>
+							<a href="#">美士</a>
+							<a href="#">蓝氏冻干粮</a>
+							<a href="#">K9Natural</a>
+							<a href="#">安娜玛特</a>
+							<a href="#">回归原野</a>
+							<a href="#">95%含肉量</a>
+							<a href="#">赛级犬御用</a>
+						</div>
+					</div>
+				</div>
+				<div class="right">
+					<div class="nav">
+						<ul>
+							<li class="active"><a href="#">热门</a></li>
+							<li><a href="#">进口狗粮</a></li>
+							<li><a href="#">国产狗粮</a></li>
+							<li><a href="#">散装狗粮</a></li>
+							<li><a href="#">处方狗粮</a></li>
+						</ul>
+					</div>
+					<div class="imgbox">
+						<div class="shang">
+							<div class="shang1">
+								<img src="imgs/main1.jpg" />
+								<div class="tit">
+									<p>巅峰-肉食盛宴</p>
+									<p>95%肉类含量</p>
+								</div>
+							</div>
+							<div class="shang_r">
+								<div class="shang_r1">
+									<img src="imgs/main2.jpg" />
+									<div class="tit">
+										<p>巅峰-肉食盛宴</p>
+										<p>95%肉类含量</p>
+									</div>
+								</div>
+								<div class="shang_r1">
+									<img src="imgs/main3.jpg" />
+									<div class="tit">
+										<p>巅峰-肉食盛宴</p>
+										<p>95%肉类含量</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="xia">
+							<div class="xia1">
+								<img src="imgs/main4.jpg" />
+								<div class="tit">
+									<p>巅峰-肉食盛宴</p>
+									<p>95%肉类含量</p>
+								</div>
+							</div>
+							<div class="xia1">
+								<img src="imgs/main5.jpg" />
+								<div class="tit">
+									<p>巅峰-肉食盛宴</p>
+									<p>95%肉类含量</p>
+								</div>
+							</div>
+							<div class="xia1">
+								<img src="imgs/main6.jpg" />
+								<div class="tit">
+									<p>巅峰-肉食盛宴</p>
+									<p>95%肉类含量</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--tab标签切换-->
+					<div class="imgbox2">
+						<ul>
+							<script type="text/html" id="tabs3">
+								{{each list as value}}
+									<li>
+										<div class="img"><img src={{value[0]}}></div>
+										<p>{{value[1]}}</p>
+										<span>{{value[2]}}</span>
+									</li>
+								{{/each}}
+							</script>
+							<!--<li>
+								<div class="img"><img src="imgs/gl1.jpg"></div>
+								<p>鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅</p>
+								<span>￥498.00</span>
+							</li>
+							<li>
+								<div class="img"><img src="imgs/gl1.jpg"></div>
+								<p>鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅</p>
+								<span>￥498.00</span>
+							</li>-->
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="bottom">
+				<a href="#"><img src="imgs/zhulb1.jpg"></a>
+				<a href="#"><img src="imgs/zhulb2.jpg"></a>
+				<a href="#"><img src="imgs/zhulb3.jpg"></a>
+				<a href="#"><img src="imgs/zhulb4.jpg"></a>
+				<a href="#"><img src="imgs/zhulb5.jpg"></a>
+				<a href="#"><img src="imgs/zhulb6.jpg"></a>
+				<a href="#"><img src="imgs/zhulb7.jpg"></a>
+				<a href="#"><img src="imgs/zhulb8.jpg"></a>
+			</div>
+		</article>
+		
+		<!--狗狗零食-->
+		<article class="main">
+			<h3><i></i>狗狗零食</h3>
+			<div class="main_con">
+				<div class="left">
+					<img src="imgs/maingb1.jpg"  />
+					<div class="left_con">
+						<div class="hot">
+							<span>———————</span>
+							<i></i><b>最热HOT</b>
+							<span>———————</span>
+						</div>
+						<div class="prind">
+							<a href="#">比瑞吉爆款</a>
+							<a href="#">麦德林</a>
+							<a href="#">美士</a>
+							<a href="#">蓝氏冻干粮</a>
+							<a href="#">K9Natural</a>
+							<a href="#">安娜玛特</a>
+							<a href="#">回归原野</a>
+							<a href="#">95%含肉量</a>
+							<a href="#">赛级犬御用</a>
+						</div>
+					</div>
+				</div>
+				<div class="right">
+					<div class="nav">
+						<ul>
+							<li class="active"><a href="#">热门</a></li>
+							<li><a href="#">进口狗粮</a></li>
+							<li><a href="#">国产狗粮</a></li>
+							<li><a href="#">散装狗粮</a></li>
+							<li><a href="#">处方狗粮</a></li>
+						</ul>
+					</div>
+					<div class="imgbox">
+						<div class="shang">
+							<div class="shang1">
+								<img src="imgs/main1.jpg" />
+								<div class="tit">
+									<p>巅峰-肉食盛宴</p>
+									<p>95%肉类含量</p>
+								</div>
+							</div>
+							<div class="shang_r">
+								<div class="shang_r1">
+									<img src="imgs/main2.jpg" />
+									<div class="tit">
+										<p>巅峰-肉食盛宴</p>
+										<p>95%肉类含量</p>
+									</div>
+								</div>
+								<div class="shang_r1">
+									<img src="imgs/main3.jpg" />
+									<div class="tit">
+										<p>巅峰-肉食盛宴</p>
+										<p>95%肉类含量</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="xia">
+							<div class="xia1">
+								<img src="imgs/main4.jpg" />
+								<div class="tit">
+									<p>巅峰-肉食盛宴</p>
+									<p>95%肉类含量</p>
+								</div>
+							</div>
+							<div class="xia1">
+								<img src="imgs/main5.jpg" />
+								<div class="tit">
+									<p>巅峰-肉食盛宴</p>
+									<p>95%肉类含量</p>
+								</div>
+							</div>
+							<div class="xia1">
+								<img src="imgs/main6.jpg" />
+								<div class="tit">
+									<p>巅峰-肉食盛宴</p>
+									<p>95%肉类含量</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--tab标签切换-->
+					<div class="imgbox2">
+						<ul>
+							<script type="text/html" id="tabs4">
+								{{each list as value}}
+									<li>
+										<div class="img"><img src={{value[0]}}></div>
+										<p>{{value[1]}}</p>
+										<span>{{value[2]}}</span>
+									</li>
+								{{/each}}
+							</script>
+							<!--<li>
+								<div class="img"><img src="imgs/gl1.jpg"></div>
+								<p>鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅</p>
+								<span>￥498.00</span>
+							</li>
+							<li>
+								<div class="img"><img src="imgs/gl1.jpg"></div>
+								<p>鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅</p>
+								<span>￥498.00</span>
+							</li>-->
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="bottom">
+				<a href="#"><img src="imgs/zhulb1.jpg"></a>
+				<a href="#"><img src="imgs/zhulb2.jpg"></a>
+				<a href="#"><img src="imgs/zhulb3.jpg"></a>
+				<a href="#"><img src="imgs/zhulb4.jpg"></a>
+				<a href="#"><img src="imgs/zhulb5.jpg"></a>
+				<a href="#"><img src="imgs/zhulb6.jpg"></a>
+				<a href="#"><img src="imgs/zhulb7.jpg"></a>
+				<a href="#"><img src="imgs/zhulb8.jpg"></a>
+			</div>
+		</article>
+		
+		<!--狗狗主粮-->
+		<article class="main">
+			<h3><i></i>狗狗日用</h3>
+			<div class="main_con">
+				<div class="left">
+					<img src="imgs/maingb1.jpg"  />
+					<div class="left_con">
+						<div class="hot">
+							<span>———————</span>
+							<i></i><b>最热HOT</b>
+							<span>———————</span>
+						</div>
+						<div class="prind">
+							<a href="#">比瑞吉爆款</a>
+							<a href="#">麦德林</a>
+							<a href="#">美士</a>
+							<a href="#">蓝氏冻干粮</a>
+							<a href="#">K9Natural</a>
+							<a href="#">安娜玛特</a>
+							<a href="#">回归原野</a>
+							<a href="#">95%含肉量</a>
+							<a href="#">赛级犬御用</a>
+						</div>
+					</div>
+				</div>
+				<div class="right">
+					<div class="nav">
+						<ul>
+							<li class="active"><a href="#">热门</a></li>
+							<li><a href="#">进口狗粮</a></li>
+							<li><a href="#">国产狗粮</a></li>
+							<li><a href="#">散装狗粮</a></li>
+							<li><a href="#">处方狗粮</a></li>
+						</ul>
+					</div>
+					<div class="imgbox">
+						<div class="shang">
+							<div class="shang1">
+								<img src="imgs/main1.jpg" />
+								<div class="tit">
+									<p>巅峰-肉食盛宴</p>
+									<p>95%肉类含量</p>
+								</div>
+							</div>
+							<div class="shang_r">
+								<div class="shang_r1">
+									<img src="imgs/main2.jpg" />
+									<div class="tit">
+										<p>巅峰-肉食盛宴</p>
+										<p>95%肉类含量</p>
+									</div>
+								</div>
+								<div class="shang_r1">
+									<img src="imgs/main3.jpg" />
+									<div class="tit">
+										<p>巅峰-肉食盛宴</p>
+										<p>95%肉类含量</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="xia">
+							<div class="xia1">
+								<img src="imgs/main4.jpg" />
+								<div class="tit">
+									<p>巅峰-肉食盛宴</p>
+									<p>95%肉类含量</p>
+								</div>
+							</div>
+							<div class="xia1">
+								<img src="imgs/main5.jpg" />
+								<div class="tit">
+									<p>巅峰-肉食盛宴</p>
+									<p>95%肉类含量</p>
+								</div>
+							</div>
+							<div class="xia1">
+								<img src="imgs/main6.jpg" />
+								<div class="tit">
+									<p>巅峰-肉食盛宴</p>
+									<p>95%肉类含量</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--tab标签切换-->
+					<div class="imgbox2">
+						<ul>
+							<script type="text/html" id="tabs5">
+								{{each list as value}}
+									<li>
+										<div class="img"><img src={{value[0]}}></div>
+										<p>{{value[1]}}</p>
+										<span>{{value[2]}}</span>
+									</li>
+								{{/each}}
+							</script>
+							<!--<li>
+								<div class="img"><img src="imgs/gl1.jpg"></div>
+								<p>鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅</p>
+								<span>￥498.00</span>
+							</li>
+							<li>
+								<div class="img"><img src="imgs/gl1.jpg"></div>
+								<p>鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅</p>
+								<span>￥498.00</span>
+							</li>-->
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="bottom">
+				<a href="#"><img src="imgs/zhulb1.jpg"></a>
+				<a href="#"><img src="imgs/zhulb2.jpg"></a>
+				<a href="#"><img src="imgs/zhulb3.jpg"></a>
+				<a href="#"><img src="imgs/zhulb4.jpg"></a>
+				<a href="#"><img src="imgs/zhulb5.jpg"></a>
+				<a href="#"><img src="imgs/zhulb6.jpg"></a>
+				<a href="#"><img src="imgs/zhulb7.jpg"></a>
+				<a href="#"><img src="imgs/zhulb8.jpg"></a>
+			</div>
+		</article>
+		
+		
+		
+	<!--E宠头条-->
+	<div id="toutiao">
+		<h3>E宠头条</h3>
+		<div class="toutiao_con">
+			<ul>
+				<li>
+					<img src="imgs/tou1.jpg" />
+					<div class="con">
+						<h4>
+							电商玩法层出不穷 网红直播上线E宠
+							<span>资讯>></span>
+						</h4>
+						<p>E宠商城邀请了秒拍萌宠达人“十爷”及其宠物“小阔爱”，参观位于空港大道的重庆仓库，并通过直播模式和广大消费者进行交流。</p>
+					</div>
+				</li>
+				<li>
+					<img src="imgs/tou2.jpg" />
+					<div class="con">
+						<h4>
+							电商玩法层出不穷 网红直播上线E宠
+							<span>资讯>></span>
+						</h4>
+						<p>E宠商城邀请了秒拍萌宠达人“十爷”及其宠物“小阔爱”，参观位于空港大道的重庆仓库，并通过直播模式和广大消费者进行交流。</p>
+					</div>
+				</li>
+				<li>
+					<img src="imgs/tou3.jpg" />
+					<div class="con">
+						<h4>
+							电商玩法层出不穷 网红直播上线E宠
+							<span>资讯>></span>
+						</h4>
+						<p>E宠商城邀请了秒拍萌宠达人“十爷”及其宠物“小阔爱”，参观位于空港大道的重庆仓库，并通过直播模式和广大消费者进行交流。</p>
+					</div>
+				</li>
+				<li>
+					<img src="imgs/tou4.jpg" />
+					<div class="con">
+						<h4>
+							电商玩法层出不穷 网红直播上线E宠
+							<span>资讯>></span>
+						</h4>
+						<p>E宠商城邀请了秒拍萌宠达人“十爷”及其宠物“小阔爱”，参观位于空港大道的重庆仓库，并通过直播模式和广大消费者进行交流。</p>
+					</div>
+				</li>
+				<li>
+					<img src="imgs/tou5.png" />
+					<div class="con">
+						<h4>
+							电商玩法层出不穷 网红直播上线E宠
+							<span>资讯>></span>
+						</h4>
+						<p>E宠商城邀请了秒拍萌宠达人“十爷”及其宠物“小阔爱”，参观位于空港大道的重庆仓库，并通过直播模式和广大消费者进行交流。</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<!--E宠口碑-->
+	<div id="koubei">
+		<h3>E宠口碑<span>更多>></span></h3>
+		<div class="kou_con">
+			<ul class="kous_nav">
+				<li class="on"></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<div class="kous_wrap">
+				
+				<ul class="slider">
+					<li>
+						<ul class="xinxi">
+							<li>西**4</li>
+							<li>加入E宠1年9月</li>
+							<li>宠物：萨摩耶</li>
+							<li>2岁</li>
+							<li>职业：学生</li>
+							<li>重庆--重庆市</li>
+							<li>第3次购买</li>
+							<li>养宠时间：2年</li>
+						</ul>
+						<div class="pic">
+							<div class="pic_con">
+								<img src="imgs/kb1.png">
+								<span><img src="imgs/line.png"></span>
+							</div>
+							
+						</div>
+						<div class="txt">
+							<p>
+							自从养我家比熊宝贝开始就一直在E宠购物，E宠给了我家查理宝宝健康安逸的生活，E宠每个客服人员都具有专业知识和爱心的服务态度，给予我们最温馨的感觉！这里向你们一线的工作人员道一声辛苦了！希望E宠在今后的岁月中会更强大，让每个消费者有一种家的感觉！
+							</p>
+							<b></b>
+						</div>
+					</li>
+					<li>
+						<ul class="xinxi">
+							<li>西**3</li>
+							<li>加入E宠9月</li>
+							<li>宠物：泰迪</li>
+							<li>1岁</li>
+							<li>职业：学生</li>
+							<li>河南--郑州市</li>
+							<li>养宠时间：2年</li>
+						</ul>
+						<div class="pic">
+							<div class="pic_con">
+								<img src="imgs/kb2.jpg">
+								<span><img src="imgs/line.png"></span>
+							</div>
+							
+						</div>
+						<div class="txt">
+							<p>
+							感谢e宠两年时间的陪伴，我家宝贝成长的非常好！e 宠的服务很热情也很周到！遇到事情积极解决，态度很耐心也很热心！两年的陪伴很开心，希望所有的宝贝都是正品！真正的从狗狗的健康出发！为狗狗提供最优质的物品！愿e 宠越来越好！我家宝贝健康快乐成长！
+							</p>
+							<b></b>
+						</div>
+					</li>
+					<li>
+						<ul class="xinxi">
+							<li>南**4</li>
+							<li>加入E宠9月</li>
+							<li>宠物：比熊</li>
+							<li>1岁</li>
+							<li>职业：学生</li>
+							<li>湖北--武汉</li>
+						</ul>
+						<div class="pic">
+							<div class="pic_con">
+								<img src="imgs/kb3.jpg">
+								<span><img src="imgs/line.png"></span>
+							</div>
+							
+						</div>
+						<div class="txt">
+							<p>
+							我家猫大哥一直喂食了E宠家的猫粮。之前喂食的是宠物店买的小品牌，每次铲屎的时候简直是要臭晕过去。后来换成他家的猫粮，每次都能愉快的铲屎了，哈哈。还有他家调理肠胃的效果真的很好，宝贝换粮有拉肚子，喂食了几包，神奇般的好了，感谢e宠，希望你们越做越好！
+							</p>
+							<b></b>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<!--TA公益-->
+	<div id="gongyi">
+		<h3>TA公益<span>了解TA公益&gt;&gt;</span></h3>
+		<div class="yi_con">
+			<p>截止今日，TA公益已联合E宠商城和<span>15</span>家品牌</p>
+			<p>累计捐赠<strong>788,413.82</strong>元</p>
+			<p>已合作<span>7</span>家公益组织，举办参与<span>2</span>场公益活动，助养<span>24</span>位领养人</p>
+			<div class="gongtit">
+				<img src="imgs/business-tit.jpg">
+			</div>
+			<div class="gong_pic">
+				<span>&lt;</span>
+				<span>&gt;</span>
+				<div class="echong">
+					<img src="imgs/epetlogo.jpg"/>
+					<p>
+						已捐助<br/>￥178,476.96
+					</p>
+				</div>
+				<div class="gong_pic_con">
+					<ul>
+						<li>
+							<img src="imgs/gy1.jpg"/>
+							<p>
+								已捐助<br/>￥178,476.96
+							</p>
+						</li>
+						<li>
+							<img src="imgs/gy2.jpg"/>
+							<p>
+								已捐助<br/>￥178,476.96
+							</p>
+						</li>
+						<li>
+							<img src="imgs/gy3.jpg"/>
+							<p>
+								已捐助<br/>￥178,476.96
+							</p>
+						</li>
+						<li>
+							<img src="imgs/gy4.jpg"/>
+							<p>
+								已捐助<br/>￥178,476.96
+							</p>
+						</li>
+						<li>
+							<img src="imgs/gy5.jpg"/>
+							<p>
+								已捐助<br/>￥178,476.96
+							</p>
+						</li>
+						<li>
+							<img src="imgs/gy6.jpg"/>
+							<p>
+								已捐助<br/>￥178,476.96
+							</p>
+						</li>
+						<li>
+							<img src="imgs/gy7.jpg"/>
+							<p>
+								已捐助<br/>￥178,476.96
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="gong_g">
+				<ul>
+					<li>
+						<div class="yh">
+							<img src="imgs/11.jpg" />
+						</div>
+						<em>土**િ</em>
+						<i>1分钟前购买了</i>
+						<div class="sp">
+							<img src="imgs/gong1.png" />
+						</div>
+						<a href="#">雷米高 澳宝 牛肉肝蔬菜营养成犬粮 5kg</a>
+						<span>为流浪小动物奉献了</span>
+						<strong>￥0.0400</strong>
+					</li>
+					<li>
+						<div class="yh">
+							<img src="imgs/11.jpg" />
+						</div>
+						<em>土**િ</em>
+						<i>1分钟前购买了</i>
+						<div class="sp">
+							<img src="imgs/gong1.png" />
+						</div>
+						<a href="#">雷米高 澳宝 牛肉肝蔬菜营养成犬粮 5kg</a>
+						<span>为流浪小动物奉献了</span>
+						<strong>￥0.0400</strong>
+					</li>
+					<li>
+						<div class="yh">
+							<img src="imgs/11.jpg" />
+						</div>
+						<em>土**િ</em>
+						<i>1分钟前购买了</i>
+						<div class="sp">
+							<img src="imgs/gong1.png" />
+						</div>
+						<a href="#">雷米高 澳宝 牛肉肝蔬菜营养成犬粮 5kg</a>
+						<span>为流浪小动物奉献了</span>
+						<strong>￥0.0400</strong>
+					</li>	
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<!--footer-->
+	<div id="foot_content">
+		<div id="foot_list">
+			<div class="foot_list_con">
+				<a href="#">绝对的正品</a>
+				<a href="#">全球的好货</a>
+				<a href="#">自家的仓库</a>
+				<a href="#">自家的配送</a>
+				<a href="#">养宠的帮手</a>
+				<a href="#">小小的成绩</a>
+			</div>
+		</div>
+		<div class="foot2">
+			<div class="foot2_left">
+				<img src="imgs/dog_phone.gif" />
+				<div class="foot2_left_con">
+					<h4>服务热线：</h4>
+					<p>400-888-9200<span>(免长途费)</span></p>
+					<p>023-65584888</p>
+					<p>工作时间：09:00--21:00</p>
+				</div>
+			</div>
+			<div class="foot2_mid">
+				<ul>
+					<li>
+						<h4>支付方式</h4>
+						<p>
+							<a href="#">货到付款</a>
+							<a href="#">余额支付</a>
+							<a href="#">在线支付</a>
+						</p>
+					</li>
+					<li>
+						<h4>配送方式</h4>
+						<p>
+							<a href="#">E宠快递</a>
+							<a href="#">外包快递</a>
+							<a href="#">物流运输</a>
+							<a href="#">公司地址</a>
+						</p>
+					</li>
+					<li>
+						<h4>购物指南</h4>
+						<p>
+							<a href="#">退换货政策</a>
+							<a href="#">它时代杂志</a>
+							<a href="#">常见问题</a>
+							<a href="#">宠物知识</a>
+						</p>
+					</li>
+					<li>
+						<h4>关于我们</h4>
+						<p>
+							<a href="#">关于我们</a>
+							<a href="#">仓储中心</a>
+							<a href="#">联系我们</a>
+							<a href="#">人才招聘</a>
+						</p>
+					</li>
+				</ul>
+			</div>
+			<div class="foot2_right">
+				<div>
+					<p>扫描下载APP</p>
+					<p>下单更优惠</p>
+					<img src="imgs/dw2.png" />
+				</div>
+				<div>
+					<p>扫描关注E宠</p>
+					<p>商城微信</p>
+					<img src="imgs/dw2.png" />
+				</div>
+			</div>
+		</div>
+		<div class="foot3">
+			<div class="foot3_wzlist">
+				<span></span>
+				<div class="foot3_wzlist_con">
+					友情链接：
+					<a href="#">E宠猫用品</a>
+					<a href="#">骨头网</a>
+					<a href="#">狗粮品牌</a>
+					<a href="#">宠物用品</a>
+					<a href="#">钓鱼网</a>
+					<a href="#">狗粮价格</a>
+					<a href="#">淘狗网</a>
+					<a href="#">重庆宠物</a>
+					<a href="#">宠物狗</a>
+					<a href="#">淘宝返利</a>
+					<a href="#">9块9包邮</a>
+					<a href="#">披萨</a>
+					<a href="#">返利网</a>
+					<a href="#">品牌折扣网</a>
+					<a href="#">大连分类信息</a>
+					<a href="#">礼物网</a>
+					<a href="#">山东网</a>
+					<div class="yin">
+						<a href="#">E宠猫用品</a>
+						<a href="#">骨头网</a>
+						<a href="#">狗粮品牌</a>
+						<a href="#">宠物用品</a>
+						<a href="#">钓鱼网</a>
+						<a href="#">狗粮价格</a>
+						<a href="#">淘狗网</a>
+						<a href="#">重庆宠物</a>
+						<a href="#">宠物狗</a>
+						<a href="#">淘宝返利</a>
+						<a href="#">9块9包邮</a>
+						<a href="#">披萨</a>
+						<a href="#">返利网</a>
+						<a href="#">品牌折扣网</a>
+						<a href="#">大连分类信息</a>
+						<a href="#">礼物网</a>
+						<a href="#">山东网</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="foot3_tplist">
+				<a href="#"><img src="imgs/360.png"></a>
+				<a href="#"><img src="imgs/baiq.png"></a>
+				<a href="#"><img src="imgs/bhdw.png"></a>
+				<a href="#"><img src="imgs/cqgs.png"></a>
+				<a href="#"><img src="imgs/jybz.png"></a>
+				<a href="#"><img src="imgs/sfqy.png"></a>
+				<a href="#"><img src="imgs/shiming.png"></a>
+				<a href="#"><img src="imgs/sjws.png"></a>
+				<a href="#"><img src="imgs/tx.png"></a>
+				<a href="#"><img src="imgs/wsls.png"></a>
+				<a href="#"><img src="imgs/360.png"></a>
+				<a href="#"><img src="imgs/baiq.png"></a>
+			</div>
+			<p>渝ICP备13005525号-2　渝ICP备10002905　增值电信业务经营许可证：渝B2-20140042 Copyright © 2007-2017 epet.com 　重庆易宠科技有限公司</p>
+		</div>
+	</div>
+	
 	</body>
 </html>
